@@ -6,9 +6,12 @@
 {% endblock %}
 
 {% block content%}
-    {%for name in names%}
+    {%for post in posts%}
+    <span class="badge rounded-pill text-bg-secondary">
+        {{post.pub_date}}</span>
         <p>
-          {{name}}
+          {{post.Title}}
+            <a href = "{% url 'post_detail_url' slug=post.slug %}" class="btn btn-light">READ</a>
         </p>
     {%endfor%}
 {% endblock %}
