@@ -1,0 +1,6 @@
+<span class="badge rounded-pill text-bg-secondary">
+        {{post.pub_date}}</span>
+        <p>
+          {{post.Title}}
+            <a href = "{% url 'post_detail_url' slug=post.slug %}" class="btn btn-light">READ</a>
+        </p>
