@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="mt-5">
+  <h1 class="mt-5" enctype="multipart/form-data">
       {{post.Title}}
-  </h1>
    <p>
-     {{post.Post_text}}
+       <img src= "{{post.image.url}}" alt="connect" style="max-height:300px">
+        {{post.Post_text}}
    </p>
+  </h1>
 {% endblock %}
