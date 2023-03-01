@@ -15,7 +15,6 @@ class post_create_view(View):
         bound_form = PostForm(request.POST, request.FILES)
         if bound_form.is_valid():
             new_post = bound_form.save()
-            #img_obj = bound_form.image.instance
             return redirect(new_post)
         return render(request, 'posts/post_create.html', {'form': bound_form})
 
